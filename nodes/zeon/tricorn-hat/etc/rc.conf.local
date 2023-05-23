@@ -1,0 +1,5 @@
+# Uncomment the following line and reboot
+# or run this to start BGPD: rcctl start bgpd
+#bgpd_flags=
+nsd_flags=
+httpd_flags=

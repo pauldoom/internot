@@ -1,0 +1,7 @@
+$ORIGIN com.
+$TTL 300
+@		IN	SOA	a.root-servers.net. fever.dream.com. 20211031 1800 900 1800 900
+@		IN	NS	a.root-servers.net.
+faceboot	IN	NS	ns.faceboot.com.
+ns.faceboot	IN	A	40.9.30.30
+metuh           IN	NS	ns.faceboot.com.

@@ -1,0 +1,5 @@
+$ORIGIN net.
+$TTL 300
+@		IN	SOA	a.root-servers.net. fever.dream.com. 20211031 1800 900 1800 900
+@		IN	NS	a.root-servers.net.
+a.root-servers	IN	A	198.41.0.4
