@@ -1,0 +1,53 @@
+frr version 7.5.1
+frr defaults traditional
+hostname frr
+hostname core.fphinity.net
+service integrated-vtysh-config
+!
+ip router-id 150.15.255.1
+!
+interface eth0
+ description "fphinity-ns-net"
+ ip address 150.15.15.1/24
+!
+interface eth1
+ description "root-nameservers"
+ ip address 150.15.255.197/30
+!
+interface eth2
+ description "faceboot"
+ ip address 150.15.255.41/30
+!
+interface eth3
+ description "slopko-industries"
+ ip address 150.15.255.65/30
+!
+interface eth7
+ description "luser-customer-11233"
+ ip address 150.15.255.253/30
+!
+interface lo
+ ip address 150.15.255.1/32
+!
+router bgp 15
+ no bgp ebgp-requires-policy
+ no bgp network import-check
+ neighbor 150.15.255.42 remote-as 409
+ neighbor 150.15.255.66 remote-as 883
+ neighbor 150.15.255.198 remote-as 722
+ !
+ address-family ipv4 unicast
+  network 150.15.0.0/16
+  neighbor 150.15.255.42 prefix-list allowed-in in
+  neighbor 150.15.255.42 prefix-list allowed-out out
+  neighbor 150.15.255.198 prefix-list allowed-in in
+  neighbor 150.15.255.198 prefix-list allowed-out out
+ exit-address-family
+!
+ip prefix-list allowed-out seq 10 permit any
+ip prefix-list allowed-in seq 10 permit any
+!
+line vty
+!
+end
+
