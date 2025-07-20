@@ -24,3 +24,5 @@ outage in 2021. The following enhancements would allow for more fun and games.
 * Setup some end clients to use the CloutFare DNS forwarders.
 * Have our super not nice hackers advertise the anycast net for the CloudFare forwarders.
 * Go ham and setup RPKI! That needs certs and servers and stuff.
+  FRR and OpenBSD have RPKI clients. Setting up a fake internet registry and the
+  server side will be interesting. See https://manrs.org/wp-content/uploads/2022/07/2022-07-04-RPKI-Week-Tutorial.pdf
