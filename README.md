@@ -15,3 +15,12 @@ Interesting files organized by Autonomous
 System. These should provide enough to reimplement this
 phony Internet on new versions.
 
+# TODO
+
+This was originally built to allow some experiments related to the Facebook BGP
+outage in 2021. The following enhancements would allow for more fun and games.
+
+* CloutFare - A Content Delivery Network (CDN) service with anycast DNS forwarders.
+* Setup some end clients to use the CloutFare DNS forwarders.
+* Have our super not nice hackers advertise the anycast net for the CloudFare forwarders.
+* Go ham and setup RPKI! That needs certs and servers and stuff.
